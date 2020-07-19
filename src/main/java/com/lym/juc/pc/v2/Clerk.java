@@ -27,7 +27,7 @@ public class Clerk {
         }
     }
     //缺货
-    public  void send() throws Exception {
+    public void send() throws Exception {
 
         lock.lock();
         try {
