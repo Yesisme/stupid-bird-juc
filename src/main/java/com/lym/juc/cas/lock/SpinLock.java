@@ -1,6 +1,9 @@
 package com.lym.juc.cas.lock;
 import java.util.concurrent.atomic.AtomicReference;
 
+/**
+ * 自旋锁demo验证
+ */
 public class SpinLock {
 
     AtomicReference<Thread> ar = new AtomicReference<>();

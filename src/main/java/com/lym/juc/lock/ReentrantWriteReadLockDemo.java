@@ -9,7 +9,7 @@ public class ReentrantWriteReadLockDemo {
 
     private Map<Object,Object> map = new HashMap<>();
 
-    ReadWriteLock lock = new ReentrantReadWriteLock();
+    ReadWriteLock lock = new ReentrantReadWriteLock(true);
 
     public static void main(String[] args) throws InterruptedException {
 

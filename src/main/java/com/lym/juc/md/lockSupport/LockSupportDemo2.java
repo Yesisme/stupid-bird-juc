@@ -1,29 +1,24 @@
 package com.lym.juc.md.lockSupport;
 
-import org.omg.CORBA.TIMEOUT;
-import sun.awt.windows.ThemeReader;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.LockSupport;
 
 public class LockSupportDemo2 {
 
     volatile List list = new ArrayList();
 
-    public void add(Object o){
+    private void add(Object o){
         list.add(o);
     }
 
-    public int size(){
+    private int size(){
         return list.size();
     }
     static Thread t1,t2;
 
     public static void main(String[] args) throws InterruptedException {
         LockSupportDemo2 ls= new LockSupportDemo2();
-
 
         t1=new Thread(()->{
             for (int i = 1; i <=10 ; i++) {
